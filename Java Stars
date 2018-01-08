@@ -1,0 +1,121 @@
+public class A
+{
+    public static void main (String [] args)
+    {
+        for (int i=1;i<5;i++)
+        {   System.out.print("\n");
+            for(int j=1;j<=i;j++)
+            {System.out.print(j);
+                System.out.print("\t");
+            }}
+    }
+}
+
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+        for(int i=0;i<5;i++)
+        {
+            if(i==0||i==4){
+                for(int j=0;j<5;j++)
+                    System.out.print("#");
+                System.out.print("\n");}
+            else
+                System.out.println("#   #");
+        }
+    }
+}
+
+
+
+public class MyClass {
+    public static void main(String args[]) {
+        for(int i=5;i>=0;i--)
+        {
+            System.out.print("\n");
+            for(int j=0;j<5;j++){
+                if(j==i){
+                    System.out.print("#");
+                }
+                else if(j<i)
+                System.out.print(" ");
+                else if(j>i)
+                System.out.print("#");
+            }
+        }
+
+    }
+}
+
+
+
+public class MyClass {
+    public static void main(String args[]) {
+        for(int i=5;i>=0;i--)
+        {
+            System.out.print("\n");
+            for(int j=0;j<5;j++){
+                if(j<i)
+                System.out.print(" ");
+                else if(j>=i){
+                    for(int n=1;n<=(5-i);n++)
+                       { System.out.print(n);}
+                    break;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+public class A
+{
+    public static void main (String [] args)
+    {
+        for (int i=0;i<5;i++)
+        {   System.out.print("\n");
+            if(i%2==0)
+            {
+                for(int j=0;j<=i;j++)
+                {   if(j%2!=0)
+                System.out.print("1\t");
+                else
+                System.out.print("0\t");
+                }
+            }
+            else{
+            for(int j=0;j<=i;j++)
+            {   if(j%2==0)
+                System.out.print("1\t");
+                else
+                System.out.print("0\t");
+            }}
+            
+        }
+    }
+}
+
+
+
+
+public class B
+{
+    public static void main (String []args){
+        for(int i=0;i<5;i++)
+        {   System.out.print("\n");
+            for(int j=0;j<=5;j++)
+            {
+                if(j==i)
+                    System.out.print("#");
+                else if(j==(4-i))
+                    System.out.print("&");
+                else
+                    System.out.print(" ");
+            }
+        }
+    }
+}
