@@ -119,3 +119,35 @@ public class B
         }
     }
 }
+
+
+EVEN-ODD
+
+import java.util.Scanner;
+public class A{
+    public static void main(String args[]){
+        Scanner s= new Scanner(System.in);
+        int a=s.nextInt();
+        if(a%2==0)
+            System.out.println(a+" is even");
+         else
+             System.out.println(a+" is odd");
+    }
+}
+
+
+
+SUM with INPUTS
+
+import java.util.Scanner;
+public class A
+{
+    public static void main (String args[])
+    {
+        Scanner c=new Scanner(System.in);
+        int a=c.nextInt();
+        int b=c.nextInt();
+        int sum=a+b;
+        System.out.println(" "+ sum);
+    }
+}
