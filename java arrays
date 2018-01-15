@@ -1,0 +1,147 @@
+find index of an array element
+
+remove specifc element from array
+
+duplicate values in an array
+
+common elements between two arrays
+
+second largest element of array
+
+all pairs of elements in array sum=specifc number
+
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+        int arr[]=new int[]{11,12,15,48,46};
+       boolean found=false;
+       System.out.println("Enter the number you want to find: ");
+       Scanner s= new Scanner(System.in);
+       int n=s.nextInt();
+       for(int i=0;i<5;i++)
+       {
+           if(n==arr[i]){
+            System.out.println(n+" is found at position: "+ (i+1) );
+            found= true;
+           }
+       }
+       if(!found)
+        System.out.println("Sorry! The number is not stored");
+
+    }
+}
+
+
+
+
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+        int arr[]=new int[]{11,12,15,48,46};
+       boolean found=false;
+       System.out.println("Enter the number you want to find: ");
+       Scanner s= new Scanner(System.in);
+       int n=s.nextInt();
+       for(int i=0;i<5;i++)
+       {
+           if(n==arr[i])
+           {
+            System.out.println(n+" is found at position: "+ (i+1) );
+            found= true;
+            for(int j=i;j<4;j++)
+            {
+                arr[j]=arr[j+1];
+            }
+           }
+       }
+       if(!found)
+        System.out.println("Sorry! The number is not stored");
+        
+        for(int x=0;x<4;x++)
+            System.out.println(arr[x]);
+
+    }
+}
+
+
+
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+        int arr[]=new int[]{11,12,15,11,12};
+        boolean dup=false;
+       for(int i=0;i<5;i++)
+       {
+           int n=arr[i];
+           for(int j=i+1;j<5;j++)
+           {
+               if(n==arr[j])
+               {
+                   System.out.println("Duplicate of "+ n+ " exists in array");
+                   dup=true;
+                   break;
+               }
+           }
+       }
+       if(!dup)
+        System.out.println("There is no duplicate copy in array");
+
+    }
+}
+
+
+
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+        int ar1[]=new int[]{11,12,15,25,35};
+        int ar2[]=new int[]{21,22,35,78,94,63,45,15,34};
+        boolean dup=false;
+       for(int i=0;i<5;i++)
+       {
+           int n=ar1[i];
+           for(int j=0;j<ar2.length;j++)
+           {
+               if(n==ar2[j])
+               {
+                   System.out.println( n+ " is common in both arrays");
+                   dup=true;
+                   break;
+               }
+           }
+       }
+       if(!dup)
+        System.out.println("There is no element common in both arrays");
+
+    }
+}
+
+
+
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+        int arr[]=new int[]{91,12,15,25,35};
+        int max=arr[0];
+        int max2=new int;
+        max2=null;
+       for(int i=0;i<5;i++)
+       {
+           if(max < arr[i])
+           {
+                max2=max;
+                max=arr[i];
+           }
+       }
+       if(max2!=null)
+       System.out.println("Largest value in array is: "+ max + "\nSecond largest value in array is: "+ max2);
+       else
+       {
+           max2=arr[1];
+           for(int i=1;i<5;i++)
+             if(max2 < arr[i])
+                 max2=arr[i];
+            System.out.println("Largest value in array is: "+ max + "\nSecond largest value in array is: "+ max2);
+       }
+    }
+}
