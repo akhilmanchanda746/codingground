@@ -145,3 +145,30 @@ public class MyClass {
        }
     }
 }
+
+
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+        int arr[]=new int[]{11,12,15,48,46};
+       boolean found=false;
+       System.out.println("Enter the sum  you want to achieve: ");
+       Scanner s= new Scanner(System.in);
+       int sum=s.nextInt();
+       for(int i=0;i<5;i++)
+       {    
+           int required_no =sum-arr[i];
+           for(int j=i;j<5;j++)
+           {
+               if(required_no==arr[j])
+               {
+                   System.out.println("The required sum pair present in array is ("+ required_no+ ", "+ arr[j] +" )");
+                   found=true;
+               }
+           }
+       }
+       if(!found)
+        System.out.println("Sorry! No such sum pair exists in this array");
+
+    }
+}
