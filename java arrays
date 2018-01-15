@@ -37,31 +37,31 @@ public class MyClass {
 import java.util.Scanner;
 public class MyClass {
     public static void main(String args[]) {
+        boolean found=false;
         int arr[]=new int[]{11,12,15,48,46};
-       boolean found=false;
-       System.out.println("Enter the number you want to find: ");
+        System.out.println("Stored array elements are: ");
+        for(int x=0;x<5;x++)
+            System.out.println(arr[x]);
+       System.out.println("Enter the number you want to remove: ");
        Scanner s= new Scanner(System.in);
        int n=s.nextInt();
        for(int i=0;i<5;i++)
        {
            if(n==arr[i])
            {
-            System.out.println(n+" is found at position: "+ (i+1) );
             found= true;
             for(int j=i;j<4;j++)
-            {
                 arr[j]=arr[j+1];
             }
-           }
        }
        if(!found)
-        System.out.println("Sorry! The number is not stored");
-        
+        System.out.println("Sorry! The number is not present in array");
         for(int x=0;x<4;x++)
             System.out.println(arr[x]);
 
     }
 }
+
 
 
 
@@ -149,7 +149,8 @@ public class MyClass {
 
 import java.util.Scanner;
 public class MyClass {
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         int arr[]=new int[]{11,12,15,48,46};
        boolean found=false;
        System.out.println("Enter the sum  you want to achieve: ");
@@ -162,7 +163,7 @@ public class MyClass {
            {
                if(required_no==arr[j])
                {
-                   System.out.println("The required sum pair present in array is ("+ required_no+ ", "+ arr[j] +" )");
+                   System.out.println("The required sum pair in array is ("+ arr[i] + ", "+ required_no +")");
                    found=true;
                }
            }
